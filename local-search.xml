@@ -4,25 +4,6 @@
   
   
   <entry>
-    <title>test</title>
-    <link href="/2024/05/31/test/"/>
-    <url>/2024/05/31/test/</url>
-    
-    <content type="html"><![CDATA[<h1 id="test1"><a href="#test1" class="headerlink" title="test1"></a>test1</h1>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>1112</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Hello World</title>
     <link href="/2024/05/31/hello-world/"/>
     <url>/2024/05/31/hello-world/</url>
@@ -30,6 +11,25 @@
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
     
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>如何使用git 进行版本控制</title>
+    <link href="/2024/02/15/test/"/>
+    <url>/2024/02/15/test/</url>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>首先 我们默认学会科学上网,有自己的github账号,且下载git</p><h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><p> 首先 我们得先知道所有的git命令，重要性不言而喻。<br>1、git status：查看状态</p><p>2、git log：查看提交历史</p><p>3、git reset –hard HEAD^：回退到上一个版本，HEAD指当前版本，如果是上上个版本可以HEAD^^</p><p>4、git reset –hard commit_id：也可以指定回退到版本号为commmit_id的版本</p><p>5、git branch：查看分支</p><p>6、git branch <name>：创建分支</p><p>7、git checkout <name>：切换分支</p><p>8、git checkout -b <name>：创建并切换分支</p><p>9、git reflog：查看命令历史</p><p>10、git clone <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#101;&#101;&#x2e;&#x63;&#111;&#109;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#101;&#101;&#x2e;&#x63;&#111;&#109;</a>:dwaylin&#x2F;Test.git E:&#x2F;GitProjects&#x2F;Test：将仓库克隆到本地的指定路径中</p><p>克隆指定分支：git clone -b dev 代码仓库地址 （dev是分支名称）</p><p>11、git tag v1.0：将标签打到最近一次commit上</p><p>12、git tag -d v1.0：删除标签</p><p>13、git tag：查看所有标签</p><p>14、git push origin v1.0：把标签push到远程，创建的标签只存储在本地，不会自动推送到远程</p><p>15、git push origin –tags：将全部的标签都推送到远程</p><p>16、git config –list：查看git配置信息</p><p>17、git config –global user.name dwaylin：配置git用户名</p><p>18、git config –global user.email <a href="mailto:&#x78;&#120;&#120;&#x40;&#x31;&#54;&#51;&#x2e;&#99;&#111;&#x6d;">&#x78;&#120;&#120;&#x40;&#x31;&#54;&#51;&#x2e;&#99;&#111;&#x6d;</a>：配置git用户邮箱</p><p>19、git checkout .：如果工作区删了文件，还未git add，那么可以撤销回来。如果撤销某个文件git checkout – <file>…</p><p>20、git reset HEAD .：撤销暂存区，即已经git add，但是还未commit，可以撤销回来。如果撤销某个文件git reset HEAD <file>…</p><p>21、切换远程仓库地址：</p><p>方法1：直接修改远程仓库地址</p><p>git remote set-url origin <a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x65;&#101;&#46;&#99;&#x6f;&#109;">&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x65;&#101;&#46;&#99;&#x6f;&#109;</a>:dwaylin&#x2F;Test.git</p><p>方法2、先删除远程仓库地址，再重新添加</p><p>git remote rm origin</p><p>git remote add origin <a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#x65;&#101;&#46;&#99;&#x6f;&#x6d;">&#103;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#x65;&#101;&#46;&#99;&#x6f;&#x6d;</a>:dwaylin&#x2F;Test.git</p><p>22、一次push或pull所有分支</p><p>git push origin –all</p><p>git pull origin –all</p><p>23、删除本地分支dev</p><p>git branch -d dev</p><p>24、删除远程分支dev</p><p>git push origin –delete dev</p><p>25、修改commit message</p><p>git commit –amend 命令后输入 i 进入输入模式</p><p>修改message后，Esc退出输入模式，再 :wq 回车保存并退出即可。</p><p>26、合并分支，将开发完成的dev分支合并到master分支</p><p>git checkout master</p><p>git merge dev</p><p>27、生成补丁</p><p>git format-patch HEAD^  最后一次提交的补丁</p><p>git format-patch HEAD^^ 最后两次提交的补丁，^可以有很多个</p><p>以上等同于：</p><p>git format-patch -1</p><p>git format-patch -2</p><p>28、打补丁</p><p>git apply –check 0001-add-ccc.txt-file.patch 检测补丁是否有冲突</p><p>git apply 0001-add-ccc.txt-file.patch 打补丁</p><p>29、更改 .gitignore</p><p>如果已经跟踪了不需要的文件则需要先把文件移除，否则会发现gitignore新增加的内容无效。</p><p>移除文件：git rm –cached abc.txt</p><p>移除文件夹（-r表示递归）：git rm -r –cached dir</p><p>之后再根据实际需要进行git add，git commit</p><h1 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h1><p>1：首先选中对应文件夹，然后右键使用git命令行，这样可以更方便的进行命令控制，不需要切换目录<br>2：使用git init创建本地仓库，给我们创建一个工作区，在这里面进行代码创建修改<br>3：使用git add新增文件，把文件保存在暂存区<br>4：使用git commit提交到仓库<br>5：使用git push把文件推送到服务器。<br>下面我会进行具体流程的演示：<br>首先我们在github上建立一个远程仓库<br><img src="/images/github_text_%E4%BB%93%E5%BA%93.png" alt="图片" title="仓库"><br>在本地建立一个文件夹用来存储和更新代码文件，选中对应文件夹，然后右键打开git命令行，首先我们的第一步是创建一个本地仓库：git init 他会生成一个.git的隐藏文件，一般情况下我们不需要管。<br><img src="/images/git_init.png" alt="图片" title="INIT"><br>然后 我们将远程库中的代码clone到本地，以进行第一行代码的修改和提交<br><img src="/images/git_clone1.png" alt="图片" title="CLONE"><br><img src="/images/git_clone2.png" alt="图片" title="CLONE"><br>可以看到，现在我们本地已经拥有了远程仓库的所有内容，然后我们进行内容的修改，比如说我修改text.txt文件的内容为已修改，然后我们进行修改后的文件的提交：<br>首先，git add .将所有文件add到缓冲区，也可以git add 文件名提交具体文件，然后可以通过 git status命令查看当前在缓冲区内的文件，git commit -m 备注信息 将缓冲区内的文件提交到仓库，最后git push 远程仓库地址 分支 推送到远程仓库<br><img src="/images/git_1.png" alt="图片" title="CLONE"><br>然后我们在远程仓库中查看我们刚才推送的文件，可以看到github上面已经成功更新了<br><img src="/images/github_1.png" alt="图片" title="CLONE"><br>然后我们点进text.txt中可以看到内容已经被修改为已修改<br><img src="/images/github_2.png" alt="图片" title="CLONE"><br>至此 我们通过git实现版本控制就已经实现了^-^</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>我认为最好的掌握知识方式就是能够理解并讲述</tag>
+      
+    </tags>
     
   </entry>
   
